@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora 24 modelos, métodos y estándares de calidad de software. Aprende sus enfoques, autores, fechas y aplicaciones con una guía interactiva en español.">
+  <meta name="theme-color" content="#0b111a">
+  <title>CalidadLab · Explora la calidad del software</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <div id="sidebar-backdrop" class="sidebar-backdrop" hidden></div>
+  <aside id="sidebar" class="sidebar" aria-label="Barra de navegación">
+    <div class="sidebar-label"><span data-icon="book-open"></span>EXPLORA Y APRENDE</div>
+    <nav aria-label="Navegación principal" class="main-nav">
+      <a href="#inicio" class="nav-link active" aria-current="page"><span data-icon="grid"></span>Panorama general</a>
+      <a href="#explorador" class="nav-link"><span data-icon="compass"></span>Explorar catálogo<span class="nav-count" data-total>24</span></a>
+      <a href="#diferencias" class="nav-link"><span data-icon="compare"></span>Modelos vs. estándares</a>
+      <a href="#historia" class="nav-link"><span data-icon="history"></span>Línea de tiempo</a>
+      <a href="#evaluacion" class="nav-link"><span data-icon="sparkles"></span>Ponte a prueba</a>
+    </nav>
+    <div class="sidebar-separator"></div>
+    <div class="sidebar-label">PARA PROFUNDIZAR</div>
+    <nav aria-label="Recursos" class="main-nav">
+      <a href="#fuentes" class="nav-link"><span data-icon="book"></span>Fuentes y referencias</a>
+      <a href="#guardados" class="nav-link"><span data-icon="bookmark"></span>Mis guardados<span id="saved-count" class="nav-count">0</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="learning-note"><span data-icon="bulb"></span><strong>La calidad no es casualidad.</strong><p>Se planifica, se construye<br>y se mejora cada día.</p><a href="#evaluacion">Pon a prueba lo que sabes <span aria-hidden="true">↗</span></a></div>
+      <div class="sidebar-footer"><span class="status-dot"></span>Una guía para aprender haciendo</div>
+    </div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="header-brand-group"><button id="menu-toggle" class="icon-button mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button><a href="#inicio" class="brand" aria-label="CalidadLab, inicio"><span class="brand-mark" data-icon="layers"></span><span>Calidad<span class="text-accent">Lab</span></span></a><span id="breadcrumb" class="breadcrumb-current">Panorama general</span></div>
+      <div class="header-actions">
+        <div class="reading-controls" role="group" aria-label="Tamaño del texto"><button id="decrease-text" type="button" aria-label="Reducir tamaño del texto" title="Reducir tamaño del texto" disabled>A−</button><output id="reading-size-value" aria-live="polite" aria-label="Tamaño del texto">100 %</output><button id="increase-text" type="button" aria-label="Aumentar tamaño del texto" title="Aumentar tamaño del texto">A+</button></div>
+        <button id="fullscreen-toggle" class="fullscreen-button" type="button" aria-label="Activar pantalla completa" aria-pressed="false" title="Pantalla completa"><span data-icon="maximize"></span><span class="fullscreen-label">Pantalla completa</span></button>
+        <button id="global-search" class="header-search" aria-label="Buscar en el catálogo" title="Buscar en el catálogo (Ctrl+K)"><span data-icon="search"></span></button>
+      </div>
+    </header>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section data-view="inicio" aria-labelledby="home-title">
+        <div class="page-eyebrow"><span></span>ENTIENDE. COMPARA. APLICA.</div>
+        <div class="hero">
+          <div class="hero-copy"><div class="hero-pill"><span data-icon="sparkles"></span>El mapa de la calidad del software</div>
+            <h1 id="home-title">Buen software.<br><span>Desde sus cimientos.</span></h1>
+            <p>Descubre los modelos y estándares que ayudan a construir software confiable, mejorar procesos y crear mejores experiencias.</p>
+            <div class="hero-actions"><a href="#explorador" class="button button-primary">Explorar el catálogo <span data-icon="arrow-right"></span></a><a href="#diferencias" class="hero-secondary">Entender las diferencias <span aria-hidden="true">↗</span></a></div>
+            <div class="hero-footnote"><span data-icon="check-circle"></span>Conceptos claros. Ejemplos prácticos. Fuentes originales.</div>
+          </div>
+          <div class="hero-visual" role="img" aria-label="La calidad del software conecta tres enfoques complementarios: proceso, producto y uso.">
+            <svg viewBox="0 0 440 340" fill="none" aria-hidden="true">
+              <defs><pattern id="dot-grid" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#4fd1ad" opacity=".22"/></pattern><linearGradient id="tile-fill" x1="190" y1="80" x2="220" y2="255" gradientUnits="userSpaceOnUse"><stop stop-color="#2c6056"/><stop offset="1" stop-color="#15372e"/></linearGradient></defs>
+              <rect width="440" height="340" fill="url(#dot-grid)"/>
+              <circle cx="224" cy="170" r="136" stroke="#37574f" stroke-dasharray="4 7"/>
+              <circle cx="224" cy="170" r="105" stroke="#304840"/>
+              <path d="M99 101 224 170 351 96M224 170 274 296" stroke="#5b9f8b" stroke-width="1.5" stroke-dasharray="4 5"/>
+              <path d="m224 136 93 54-93 54-93-54z" fill="#193e37" stroke="#42846f"/>
+              <path d="m131 190 93 54 93-54v16l-93 54-93-54z" fill="#122b27" stroke="#42846f"/>
+              <path d="m224 106 93 54-93 54-93-54z" fill="#225345" stroke="#55ae8a"/>
+              <path d="m131 160 93 54 93-54v15l-93 54-93-54z" fill="#173a30" stroke="#55ae8a"/>
+              <path d="m224 76 93 54-93 54-93-54z" fill="url(#tile-fill)" stroke="#77e5b6"/>
+              <path d="m131 130 93 54 93-54v15l-93 54-93-54z" fill="#23513f" stroke="#77e5b6"/>
+              <path d="m224 101 28 15v23c0 17-28 28-28 28s-28-11-28-28v-23z" fill="#34d399"/>
+              <path d="m211 132 9 8 18-21" stroke="#083325" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="87" cy="167" r="4" fill="#34d399"/><circle cx="338" cy="241" r="4" fill="#34d399"/>
+            </svg>
+            <span class="diagram-label label-process"><span class="tiny-icon" data-icon="workflow"></span>Proceso<span class="diagram-number">01</span></span>
+            <span class="diagram-label label-product"><span class="tiny-icon" data-icon="box"></span>Producto<span class="diagram-number">02</span></span>
+            <span class="diagram-label label-use"><span class="tiny-icon" data-icon="users"></span>Uso<span class="diagram-number">03</span></span>
+            <span class="diagram-caption">TRES ENFOQUES. UNA VISIÓN INTEGRAL.</span>
+          </div>
+        </div>
+        <div class="stats-strip"><div><strong data-total>24</strong><span>referencias para explorar</span></div><div><strong>03</strong><span>enfoques complementarios</span></div><div><span class="stat-icon" data-icon="globe"></span><span>Una perspectiva global</span></div><div><span class="stat-icon" data-icon="book-open"></span><span>Aprende a tu ritmo</span></div></div>
+
+        <div class="section-heading"><div><div class="section-kicker">EL PUNTO DE PARTIDA</div><h2>Tres formas de mirar la calidad</h2><p>Un buen proceso, un buen producto y una buena experiencia se complementan.</p></div><span class="subtle-label">Elige un enfoque para empezar</span></div>
+        <div id="approach-grid" class="reference-grid"></div>
+        <div class="section-heading featured-heading"><div><div class="section-kicker">IMPRESCINDIBLES</div><h2>Tu primera parada</h2><p>Una referencia de cada enfoque para conectar las ideas.</p></div><a href="#explorador" class="text-link">Ver todo el catálogo <span data-icon="arrow-right"></span></a></div>
+        <div id="featured-grid" class="reference-grid"></div>
+        <div class="concept-callout"><span class="callout-icon" data-icon="bulb"></span><div><strong>Una norma también puede contener un modelo.</strong><p>ISO/IEC 25010 es un estándar que define un modelo de calidad. Conocer el propósito de cada referencia es más útil que memorizar etiquetas.</p></div><a href="#diferencias" class="text-link">Descubre por qué <span data-icon="arrow-right"></span></a></div>
+      </section>
+
+      <section data-view="explorador" aria-labelledby="catalog-title" hidden>
+        <div class="page-eyebrow"><span></span>EXPLORA EL CONOCIMIENTO</div><div class="page-heading"><div><h1 id="catalog-title">Un mundo de referencias.</h1><p>Encuentra qué evalúa cada propuesta, quién la creó y cómo aplicarla.</p></div><span class="heading-counter"><span data-total>24</span> fichas</span></div>
+        <div class="catalog-tools"><div class="catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Buscar por nombre, autor, año o concepto..." aria-label="Buscar referencias"><kbd>/</kbd></div><div class="filter-controls"><div id="category-filters" class="filter-pills" role="group" aria-label="Filtrar por enfoque"><button data-category="todos" class="filter-pill active" aria-pressed="true">Todos</button><button data-category="proceso" class="filter-pill" aria-pressed="false"><i class="category-dot proceso"></i>Proceso</button><button data-category="producto" class="filter-pill" aria-pressed="false"><i class="category-dot producto"></i>Producto</button><button data-category="uso" class="filter-pill" aria-pressed="false"><i class="category-dot uso"></i>Uso</button></div><div class="select-filters"><label class="sr-only" for="type-filter">Tipo de referencia</label><select id="type-filter"><option value="todos">Todos los tipos</option><option>Modelo</option><option>Estándar</option><option>Marco</option><option>Método</option></select><label class="sr-only" for="sort-filter">Ordenar referencias</label><select id="sort-filter"><option value="recommended">Orden sugerido</option><option value="oldest">Más antiguas primero</option><option value="newest">Más recientes primero</option><option value="name">Nombre: A–Z</option></select></div></div></div>
+        <div class="results-line"><p id="result-count" role="status" aria-live="polite"></p><button id="reset-filters" class="quiet-button">Limpiar filtros <span data-icon="reset"></span></button></div>
+        <div id="catalog-grid" class="reference-grid"></div>
+        <div id="catalog-empty" class="empty-state" hidden><span data-icon="search"></span><h2>No encontramos coincidencias</h2><p>Prueba otro nombre o elimina los filtros para volver a explorar.</p><button class="button button-primary" data-action="reset-filters">Ver todas las referencias</button></div>
+        <p class="catalog-note"><span data-icon="info"></span>Selección educativa, no exhaustiva. Los enfoques pueden superponerse. Las fechas indican el hito de origen, explicado en cada ficha.</p>
+      </section>
+
+      <section data-view="diferencias" aria-labelledby="differences-title" hidden>
+        <div class="page-eyebrow"><span></span>CONCEPTOS QUE CONVIENE DISTINGUIR</div><div class="page-heading"><div><h1 id="differences-title">Modelo ≠ estándar.</h1><p>Se relacionan, pero responden a preguntas diferentes.</p></div></div>
+        <div class="difference-intro"><article class="definition-card definition-model"><span class="approach-icon" data-icon="compass"></span><span class="section-kicker">UNA ESTRUCTURA PARA ENTENDER</span><h2>Modelo</h2><p>Una representación conceptual que organiza factores, relaciones o prácticas para comprender, evaluar y mejorar algo.</p><div class="definition-example">Por ejemplo: <strong>McCall, Boehm o CMMI.</strong></div></article><article class="definition-card definition-standard"><span class="approach-icon" data-icon="file-check"></span><span class="section-kicker">UN ACUERDO FORMAL</span><h2>Estándar</h2><p>Un documento acordado y aprobado por un organismo reconocido que establece requisitos, recomendaciones o características comunes.</p><div class="definition-example">Por ejemplo: <strong>ISO/IEC 25010 o IEEE 830.</strong></div></article></div>
+        <div class="table-panel"><div class="panel-heading"><h2>Las diferencias, punto por punto</h2><p>La obligatoriedad y la certificación dependen de cada caso.</p></div><div class="table-scroll" role="region" aria-label="Tabla comparativa de modelos y estándares" tabindex="0"><table><caption class="sr-only">Comparación conceptual entre modelo y estándar</caption><thead><tr><th scope="col">Característica</th><th scope="col">Modelo</th><th scope="col">Estándar</th></tr></thead><tbody><tr><th scope="row">Naturaleza</th><td>Abstracción o marco conceptual.</td><td>Documento formal de consenso.</td></tr><tr><th scope="row">Origen</th><td>Autores, investigadores, empresas o instituciones.</td><td>Organismos reconocidos: ISO, IEC, IEEE, W3C, entre otros.</td></tr><tr><th scope="row">Propósito</th><td>Explicar, organizar, evaluar o guiar la mejora.</td><td>Unificar criterios, requisitos o recomendaciones.</td></tr><tr><th scope="row">Adaptación</th><td>Puede adaptarse según sus reglas y el contexto.</td><td>Puede permitir adaptación; declarar conformidad exige respetar los requisitos aplicables.</td></tr><tr><th scope="row">Obligatoriedad</th><td>Habitualmente se adopta por decisión de la organización.</td><td>Generalmente voluntario; puede ser exigido por contrato o regulación.</td></tr><tr><th scope="row">Evaluación</th><td>Puede disponer de evaluaciones formales, como las de CMMI.</td><td>No todo estándar tiene un esquema de certificación. ISO no emite certificados.</td></tr></tbody></table></div></div>
+        <div class="concept-callout"><span class="callout-icon" data-icon="layers"></span><div><strong>Las categorías no son excluyentes.</strong><p>ISO/IEC 25010 es un estándar que contiene un modelo. ITIL y COBIT son marcos de gestión y gobierno. PSP y TSP son métodos de mejora. Cascada, espiral y enfoques ágiles organizan el desarrollo; por sí solos no son modelos de atributos de calidad.</p></div></div>
+        <div class="source-note">Para ampliar: <a href="https://www.iso.org/certification.html" target="_blank" rel="noopener noreferrer">ISO: certificación ↗</a><span>·</span><a href="https://www.iso.org/standard/78176.html" target="_blank" rel="noopener noreferrer">ISO/IEC 25010:2023 ↗</a></div>
+        <div class="section-heading"><div><h2>De la teoría a una decisión</h2><p>En una aplicación de reservas, los tres enfoques se traducen en preguntas concretas.</p></div></div><div class="reference-grid"><article class="scenario-card"><span class="badge proceso">Proceso</span><h3>¿Cómo evitamos errores?</h3><p>Acordar revisiones, gestionar requisitos y aprender de los defectos.</p><button class="text-link" data-open="cmmi">Conocer CMMI <span data-icon="arrow-right"></span></button></article><article class="scenario-card"><span class="badge producto">Producto</span><h3>¿La reserva funciona bien?</h3><p>Comprobar funciones, tiempos de respuesta, seguridad y recuperación.</p><button class="text-link" data-open="iso25010">Conocer ISO/IEC 25010 <span data-icon="arrow-right"></span></button></article><article class="scenario-card"><span class="badge uso">Uso</span><h3>¿La persona logra reservar?</h3><p>Observar éxito, esfuerzo y satisfacción en condiciones reales.</p><button class="text-link" data-open="iso9241">Conocer ISO 9241-11 <span data-icon="arrow-right"></span></button></article></div>
+      </section>
+
+      <section data-view="historia" aria-labelledby="history-title" hidden>
+        <div class="page-eyebrow"><span></span>IDEAS QUE HAN EVOLUCIONADO</div><div class="page-heading"><div><h1 id="history-title">La calidad tiene historia.</h1><p>Recorre los hitos de origen de las referencias del catálogo, desde 1977.</p></div><label class="history-select">Enfoque<select id="timeline-filter"><option value="todos">Todos los enfoques</option><option value="proceso">Proceso</option><option value="producto">Producto</option><option value="uso">Uso</option></select></label></div>
+        <div class="timeline-notice"><span data-icon="info"></span>Un año marca la primera publicación o el hito indicado en la ficha. Las revisiones posteriores se explican al abrirla.</div><div id="timeline" class="timeline"></div>
+      </section>
+
+      <section data-view="evaluacion" aria-labelledby="quiz-title" hidden>
+        <div class="page-eyebrow"><span></span>APRENDER TAMBIÉN ES PRACTICAR</div><div class="page-heading"><div><h1 id="quiz-title">Conecta lo que aprendiste.</h1><p>Cinco preguntas, sin límite de tiempo. Cada respuesta es una oportunidad para entender mejor.</p></div></div>
+        <div class="quiz-layout"><div id="quiz-panel" class="quiz-panel"></div><aside class="quiz-aside"><span data-icon="bulb"></span><h2>No se trata de memorizar.</h2><p>Piensa qué se evalúa, para qué se utiliza una referencia y cuál es su contexto.</p><div class="quiz-tip"><span data-icon="check-circle"></span>Recibirás una explicación en cada pregunta.</div><div class="quiz-tip"><span data-icon="check-circle"></span>Puedes consultar el catálogo cuando quieras.</div><a href="#explorador" class="text-link">Repasar el catálogo <span data-icon="arrow-right"></span></a></aside></div>
+      </section>
+
+      <section data-view="fuentes" aria-labelledby="sources-title" hidden>
+        <div class="page-eyebrow"><span></span>APRENDE DESDE EL ORIGEN</div><div class="page-heading"><div><h1 id="sources-title">El conocimiento, con respaldo.</h1><p>Fuentes primarias, publicaciones originales y catálogos de los organismos responsables.</p></div></div>
+        <div class="source-method"><span data-icon="book-open"></span><div><h2>Cómo leer esta guía</h2><p>Esta es una selección internacional con fines educativos. Las descripciones son síntesis propias y los ejemplos son ilustrativos. Cada ficha separa el hito de origen de las ediciones posteriores. Para una aplicación formal, consulta la edición y el alcance del documento original.</p><p class="reviewed-date">Fuentes consultadas el 13 de octubre de 2026. Algunos documentos completos pueden requerir acceso o compra.</p></div></div>
+        <div id="sources-list" class="sources-list"></div>
+        <div class="source-note">Referencia conceptual adicional: <a href="https://www.iso.org/certification.html" target="_blank" rel="noopener noreferrer">ISO · Certificación y organismos independientes ↗</a></div>
+      </section>
+
+      <section data-view="guardados" aria-labelledby="saved-title" hidden>
+        <div class="page-eyebrow"><span></span>TU PROPIA RUTA DE APRENDIZAJE</div><div class="page-heading"><div><h1 id="saved-title">Ideas para volver a visitar.</h1><p>Guarda las referencias que quieras repasar. Se conservan en este navegador.</p></div></div><div id="saved-grid" class="reference-grid"></div><div id="saved-empty" class="empty-state"><span data-icon="bookmark"></span><h2>Tu colección empieza aquí</h2><p>Usa el marcador de cualquier ficha para encontrarla después.</p><a href="#explorador" class="button button-primary">Explorar el catálogo <span data-icon="arrow-right"></span></a></div>
+      </section>
+
+      <footer class="page-footer"><span><strong>CalidadLab</strong> · El conocimiento es el primer paso.</span><span>Hecho para aprender <span class="footer-spark" aria-hidden="true">✳</span> Ingeniería de software</span></footer>
+      <noscript><div class="noscript-note">Activa JavaScript para consultar las 24 fichas, usar los filtros y realizar la autoevaluación.</div></noscript>
+    </main>
+  </div>
+  <div id="compare-tray" class="compare-tray" hidden><div><strong id="compare-count">0 de 3 seleccionados</strong><span>Elige entre 2 y 3 referencias</span></div><div class="flex items-center gap-3"><button id="clear-compare" class="quiet-button">Limpiar</button><button id="open-comparison" class="button button-primary" disabled>Comparar <span data-icon="compare"></span></button></div></div>
+  <dialog id="detail-dialog" class="content-dialog" aria-labelledby="detail-title"><button class="dialog-close icon-button" data-close-dialog aria-label="Cerrar ficha"><span data-icon="x"></span></button><div id="detail-body"></div></dialog>
+  <dialog id="comparison-dialog" class="content-dialog comparison-dialog" aria-labelledby="comparison-title"><button class="dialog-close icon-button" data-close-dialog aria-label="Cerrar comparación"><span data-icon="x"></span></button><div id="comparison-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

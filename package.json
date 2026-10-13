@@ -1,0 +1,15 @@
+{
+  "name": "calidad-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Guía interactiva de modelos y estándares de calidad de software",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.18",
+    "tailwindcss": "4.1.18"
+  }
+}
